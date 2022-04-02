@@ -1,0 +1,8 @@
+project: project_name
+target: target_name
+
+cmds:
+  - cmd: /key_package_decode
+  - cmd: /mls_message_decode
+  - cmd: /proposal_decode
+  - cmd: /welcome_decode
