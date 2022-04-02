@@ -19,7 +19,7 @@ RUN cd openmls/fuzz && ${HOME}/.cargo/bin/cargo fuzz build
 FROM ubuntu:20.04
 
 ## TODO: Change <Path in Builder Stage>
-COPY --from=builder /repo/target/x86_64-unknown-linux-gnu/release/key_package_decode /
-COPY --from=builder /repo/target/x86_64-unknown-linux-gnu/release/mls_message_decode /
-COPY --from=builder /repo/target/x86_64-unknown-linux-gnu/release/proposal_decode /
-COPY --from=builder /repo/target/x86_64-unknown-linux-gnu/release/welcome_decode /
+COPY --from=builder /repo/openmls/target/x86_64-unknown-linux-gnu/release/key_package_decode /
+COPY --from=builder /repo/openmls/target/x86_64-unknown-linux-gnu/release/mls_message_decode /
+COPY --from=builder /repo/openmls/target/x86_64-unknown-linux-gnu/release/proposal_decode /
+COPY --from=builder /repo/openmls/target/x86_64-unknown-linux-gnu/release/welcome_decode /
